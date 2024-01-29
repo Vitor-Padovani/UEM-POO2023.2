@@ -1,7 +1,10 @@
 package base;
+import java.util.Date;
 
 public class Usuario {
-    private String nome, email, senha, usuario, dtNascimento;
+    private String nome, email, senha, usuario;
+    private Date dtNascimento;
+    private int id;
 
     public String getNome() {
         return nome;
@@ -35,13 +38,22 @@ public class Usuario {
         this.usuario = usuario;
     }
 
-    public String getDtNascimento() {
+    public Date getDtNascimento() {
         return dtNascimento;
     }
 
-    public void setDtNascimento(String dtNascimento) {
+    public void setDtNascimento(Date dtNascimento) {
         this.dtNascimento = dtNascimento;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
 
     @Override
     public String toString() {

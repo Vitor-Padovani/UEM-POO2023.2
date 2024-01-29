@@ -5,6 +5,13 @@
 package gui;
 
 import base.Usuario;
+import bd.UsuarioDAO;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -226,12 +233,21 @@ public class TelaCadastro extends javax.swing.JFrame {
             user.setNome(TFNome.getText());
             user.setEmail(TFEmail.getText());
             user.setUsuario(TFUsuario.getText());
-            user.setDtNascimento(TFDtNascimento.getText());
+            DateFormat format = new SimpleDateFormat("MM/dd/yyyy");
+            
+            try {
+                Date data = (Date)format.parse(TFDtNascimento.getText());
+                user.setDtNascimento(data);
+            } catch (ParseException ex) {
+                System.out.println("Erro: "+ex);
+            }
+            
             user.setSenha(senha);
             
-            JOptionPane.showMessageDialog(null, "Cadastro efetuado com sucesso!");
+            UsuarioDAO userDAO = new UsuarioDAO();
             
-            System.out.println(user);
+            userDAO.inserirUsuario(user);
+            
         } else {
             JOptionPane.showMessageDialog(null, "Senha e confirmar senha não conferem!");
         }
