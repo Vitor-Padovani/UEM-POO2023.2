@@ -4,6 +4,10 @@
  */
 package gui;
 
+import base.Usuario;
+import bd.UsuarioDAO;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author igorp
@@ -61,6 +65,11 @@ public class TelaInicial extends javax.swing.JFrame {
 
         BtnEntrar.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         BtnEntrar.setText("ENTRAR");
+        BtnEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnEntrarActionPerformed(evt);
+            }
+        });
 
         BtnCadastrar.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         BtnCadastrar.setText("CADASTRAR");
@@ -162,6 +171,26 @@ public class TelaInicial extends javax.swing.JFrame {
     private void BtnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSairActionPerformed
         System.exit(0);
     }//GEN-LAST:event_BtnSairActionPerformed
+
+    private void BtnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEntrarActionPerformed
+        Usuario usuario = new Usuario();
+        usuario.setUsuario(TFUsuario.getText());
+        String senha = String.valueOf(PFSenha.getPassword());
+        usuario.setSenha(senha);
+        
+        UsuarioDAO usuariodao = new UsuarioDAO();
+        boolean entrar = usuariodao.autenticar(usuario);
+        
+        if (entrar == true){
+            JOptionPane.showMessageDialog(null, "Seja Bem vindo(a)!");
+            TelaMenu telamenu = new TelaMenu();
+            telamenu.setVisible(true);
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuario e/ou senha incorreto(s)!");
+            PFSenha.setText("");
+        }
+    }//GEN-LAST:event_BtnEntrarActionPerformed
 
     /**
      * @param args the command line arguments
