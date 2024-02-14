@@ -46,9 +46,19 @@ public class TelaMenu extends javax.swing.JFrame {
 
         BtnNovoFilme.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         BtnNovoFilme.setText("NOVO FILME");
+        BtnNovoFilme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnNovoFilmeActionPerformed(evt);
+            }
+        });
 
         BtnVisualizarFilme.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        BtnVisualizarFilme.setText("VIZUALIZAR FILME(S)");
+        BtnVisualizarFilme.setText("VISUALIZAR FILME(S)");
+        BtnVisualizarFilme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnVisualizarFilmeActionPerformed(evt);
+            }
+        });
 
         BtnAtualizarFilme.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         BtnAtualizarFilme.setText("ATUALIZAR FILME");
@@ -58,6 +68,11 @@ public class TelaMenu extends javax.swing.JFrame {
 
         BtnVoltar.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         BtnVoltar.setText("VOLTAR");
+        BtnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnVoltarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -111,6 +126,22 @@ public class TelaMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BtnNovoFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnNovoFilmeActionPerformed
+        TelaNovoFilme tnovofilme = new TelaNovoFilme();
+        tnovofilme.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BtnNovoFilmeActionPerformed
+
+    private void BtnVisualizarFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVisualizarFilmeActionPerformed
+        TelaVisualizarFilmes tvisualizarfilmes = new TelaVisualizarFilmes();
+        tvisualizarfilmes.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BtnVisualizarFilmeActionPerformed
+
+    private void BtnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVoltarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnVoltarActionPerformed
 
     /**
      * @param args the command line arguments

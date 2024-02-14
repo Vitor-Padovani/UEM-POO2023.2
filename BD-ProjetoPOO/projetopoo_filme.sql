@@ -16,40 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `usuario`
+-- Table structure for table `filme`
 --
 
-DROP TABLE IF EXISTS `usuario`;
+DROP TABLE IF EXISTS `filme`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usuario` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(150) DEFAULT NULL,
-  `email` varchar(150) DEFAULT NULL,
-  `usuario` varchar(150) DEFAULT NULL,
-  `senha` varchar(150) DEFAULT NULL,
-  `dt_nascimento` date DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `filme` (
+  `id_filme` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_filme` varchar(150) DEFAULT NULL,
+  `genero` varchar(150) DEFAULT NULL,
+  `ano_lancamento` int(11) DEFAULT NULL,
+  `diretor` varchar(150) DEFAULT NULL,
+  `id_usuario` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_filme`),
+  KEY `fk_usuario_filme` (`id_usuario`),
+  CONSTRAINT `fk_usuario_filme` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usuario`
+-- Dumping data for table `filme`
 --
 
-LOCK TABLES `usuario` WRITE;
-/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'Igor','igor@uem.br','igor','123','1990-02-22');
-/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+LOCK TABLES `filme` WRITE;
+/*!40000 ALTER TABLE `filme` DISABLE KEYS */;
+INSERT INTO `filme` VALUES (1,'Matrix','Ficcao Cientifica',1998,'AAAA',1),(2,'Matrix Reloaded','Ficcao Cientifica',2000,'AAAA',1),(3,'Matrix 4','Ficcao Cientifica',2021,'AAAA',1),(4,'O senhor dos aneis','Epico',2002,'AAAA',1);
+/*!40000 ALTER TABLE `filme` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'projetopoo'
---
-
---
--- Dumping routines for database 'projetopoo'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -60,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-29 19:50:35
+-- Dump completed on 2024-02-14 19:01:25

@@ -5,10 +5,11 @@
         <group>
             <file>file:/C:/Users/igorp/OneDrive/Documentos/NetBeansProjects/JavaTeste12/Aula10-ProjetoExemplo/src/bd/UsuarioDAO.java</file>
             <file>file:/C:/Users/igorp/OneDrive/Documentos/NetBeansProjects/JavaTeste12/Aula10-ProjetoExemplo/src/gui/TelaAdministrador.java</file>
+            <file>file:/C:/Users/igorp/OneDrive/Documentos/NetBeansProjects/JavaTeste12/Aula10-ProjetoExemplo/src/gui/TelaNovoFilme.java</file>
+            <file>file:/C:/Users/igorp/OneDrive/Documentos/NetBeansProjects/JavaTeste12/Aula10-ProjetoExemplo/src/bd/FilmeDAO.java</file>
             <file>file:/C:/Users/igorp/OneDrive/Documentos/NetBeansProjects/JavaTeste12/Aula10-ProjetoExemplo/src/gui/TelaMenu.java</file>
-            <file>file:/C:/Users/igorp/OneDrive/Documentos/NetBeansProjects/JavaTeste12/Aula10-ProjetoExemplo/src/base/Usuario.java</file>
+            <file>file:/C:/Users/igorp/OneDrive/Documentos/NetBeansProjects/JavaTeste12/Aula10-ProjetoExemplo/src/gui/TelaVisualizarFilmes.java</file>
             <file>file:/C:/Users/igorp/OneDrive/Documentos/NetBeansProjects/JavaTeste12/Aula10-ProjetoExemplo/src/gui/TelaCadastro.java</file>
-            <file>file:/C:/Users/igorp/OneDrive/Documentos/NetBeansProjects/JavaTeste12/Aula10-ProjetoExemplo/src/bd/ConexaoBD.java</file>
             <file>file:/C:/Users/igorp/OneDrive/Documentos/NetBeansProjects/JavaTeste12/Aula10-ProjetoExemplo/src/gui/TelaInicial.java</file>
         </group>
     </open-files>
