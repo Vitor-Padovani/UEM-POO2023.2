@@ -89,4 +89,46 @@ public class FilmeDAO {
         
         return filmes;
     }
+    
+    public void deletarFilme (String nome){
+        String sql = "DELETE FROM filme WHERE nome_filme = ?";
+        Connection conn = null;
+        PreparedStatement pstm = null;
+        String sqlSelect = "SELECT id_filme FROM filme WHERE nome_filme = ?";
+        ResultSet rs = null;
+        
+        try {
+            conn = ConexaoBD.criarConexao();
+            pstm = conn.prepareStatement(sqlSelect);
+            pstm.setString(1, nome); 
+            
+            rs = pstm.executeQuery();
+            
+            if (rs.next()){
+                pstm = conn.prepareStatement(sql);
+                pstm.setString(1, nome);
+                pstm.execute();
+                JOptionPane.showMessageDialog(null, "Filme deletado com sucesso!");
+            }else {
+                JOptionPane.showMessageDialog(null, "Filme não encontrado!");
+            }
+            
+        } catch (Exception e){
+            System.out.println("Erro: "+e);
+        } finally {
+            try{
+                if (pstm!=null){
+                    pstm.close();
+                }
+                if (conn!=null){
+                    conn.close();
+                }
+                if (rs!=null){
+                    rs.close();
+                }
+            } catch(Exception ex){
+                System.out.println("Erro: "+ex);
+            }
+        }
+    }
 }

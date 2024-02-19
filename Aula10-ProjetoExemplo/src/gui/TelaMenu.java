@@ -62,9 +62,19 @@ public class TelaMenu extends javax.swing.JFrame {
 
         BtnAtualizarFilme.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         BtnAtualizarFilme.setText("ATUALIZAR FILME");
+        BtnAtualizarFilme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnAtualizarFilmeActionPerformed(evt);
+            }
+        });
 
         BtnDeletarFilme.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         BtnDeletarFilme.setText("DELETAR FILME");
+        BtnDeletarFilme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnDeletarFilmeActionPerformed(evt);
+            }
+        });
 
         BtnVoltar.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         BtnVoltar.setText("VOLTAR");
@@ -142,6 +152,18 @@ public class TelaMenu extends javax.swing.JFrame {
     private void BtnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVoltarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnVoltarActionPerformed
+
+    private void BtnAtualizarFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAtualizarFilmeActionPerformed
+        TelaAtualizarFilme tatulizarfilme = new TelaAtualizarFilme();
+        tatulizarfilme.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BtnAtualizarFilmeActionPerformed
+
+    private void BtnDeletarFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDeletarFilmeActionPerformed
+        TelaDeletarFilme tdeletarfilme = new TelaDeletarFilme();
+        tdeletarfilme.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BtnDeletarFilmeActionPerformed
 
     /**
      * @param args the command line arguments

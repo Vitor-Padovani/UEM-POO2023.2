@@ -54,6 +54,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         BtnCadastrar = new javax.swing.JButton();
         BtnLimpar = new javax.swing.JButton();
         BtnVoltar = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -203,15 +204,28 @@ public class TelaCadastro extends javax.swing.JFrame {
                     .addContainerGap(672, Short.MAX_VALUE)))
         );
 
+        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jButton3.setText("VOLTAR");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(372, 372, 372)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(372, 372, 372)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(339, 339, 339)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(340, Short.MAX_VALUE)))
         );
 
         pack();
@@ -290,45 +304,22 @@ public class TelaCadastro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCadastrar;
-    private javax.swing.JButton BtnCadastrar1;
-    private javax.swing.JButton BtnCadastrar2;
-    private javax.swing.JButton BtnEntrar1;
-    private javax.swing.JButton BtnEntrar2;
     private javax.swing.JButton BtnLimpar;
-    private javax.swing.JButton BtnLimpar1;
-    private javax.swing.JButton BtnLimpar2;
-    private javax.swing.JButton BtnSair1;
-    private javax.swing.JButton BtnSair2;
     private javax.swing.JButton BtnVoltar;
     private javax.swing.JPasswordField PFConfirmarSenha;
     private javax.swing.JPasswordField PFSenha;
-    private javax.swing.JPasswordField PFSenha1;
-    private javax.swing.JPasswordField PFSenha2;
     private javax.swing.JTextField TFDtNascimento;
     private javax.swing.JTextField TFEmail;
     private javax.swing.JTextField TFNome;
     private javax.swing.JTextField TFUsuario;
-    private javax.swing.JTextField TFUsuario2;
-    private javax.swing.JTextField TFUsuario3;
-    private javax.swing.JTextField TFUsuario4;
-    private javax.swing.JTextField TFUsuario5;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
 }

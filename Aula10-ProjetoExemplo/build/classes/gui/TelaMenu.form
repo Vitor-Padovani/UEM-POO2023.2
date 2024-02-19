@@ -129,6 +129,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="ATUALIZAR FILME"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnAtualizarFilmeActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BtnDeletarFilme">
           <Properties>
@@ -137,6 +140,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="DELETAR FILME"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnDeletarFilmeActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BtnVoltar">
           <Properties>
